@@ -1,0 +1,37 @@
+{
+  "name": "eslint-plugin-smart-apostrophes",
+  "version": "0.1.0",
+  "description": "Suggests the use of smart apostrophes over straight ones.",
+  "main": "./dist/index.js",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --no-splitting --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/younesaassila/eslint-plugin-smart-apostrophes.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "quotes",
+    "smart-quotes",
+    "smart-quotes-only"
+  ],
+  "author": "Younes Aassila",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/younesaassila/eslint-plugin-smart-apostrophes/issues"
+  },
+  "homepage": "https://github.com/younesaassila/eslint-plugin-smart-apostrophes#readme",
+  "devDependencies": {
+    "@types/eslint": "^7.28.2",
+    "@types/estree": "0.0.50",
+    "@types/node": "^16.11.6",
+    "tsup": "^5.6.0",
+    "typescript": "^4.4.4",
+    "vue-eslint-parser": "^8.0.1"
+  }
+}
