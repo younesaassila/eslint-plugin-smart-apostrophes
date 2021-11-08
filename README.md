@@ -1,6 +1,6 @@
 # eslint-plugin-smart-apostrophes
 
-Suggests the use of smart apostrophes over straight ones.
+Suggests the use of smart apostrophes over straight ones. Supports Vue files.
 
 ## Installation
 

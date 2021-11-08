@@ -49,13 +49,21 @@ const rule: Rule.RuleModule = {
         Literal: (node: Literal) => handle(node),
       };
 
-    return context.parserServices.defineTemplateBodyVisitor({
-      // @ts-ignore
-      Literal: (node: AST.ESLintLiteral) => handle(node),
-      // VLiteral: (node: AST.VLiteral) => handle(node),
-      // @ts-ignore
-      VText: (node: AST.VText) => handle(node),
-    });
+    return context.parserServices.defineTemplateBodyVisitor(
+      // Event handlers for <template>.
+      {
+        // @ts-ignore
+        Literal: (node: AST.ESLintLiteral) => handle(node),
+        // VLiteral: (node: AST.VLiteral) => handle(node),
+        // @ts-ignore
+        VText: (node: AST.VText) => handle(node),
+      },
+      // Event handlers for <script> or scripts.
+      {
+        // @ts-ignore
+        Literal: (node: AST.ESLintLiteral) => handle(node),
+      }
+    );
   },
 };
 

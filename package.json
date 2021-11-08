@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-smart-apostrophes",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Suggests the use of smart apostrophes over straight ones.",
   "main": "./dist/index.js",
   "files": [
