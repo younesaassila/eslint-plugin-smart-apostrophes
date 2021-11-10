@@ -26,18 +26,30 @@ const rule: Rule.RuleModule = {
         node,
         message: "Use smart apostrophe instead of straight apostrophe.",
         fix(fixer) {
-          const fixed = value.replace(
+          const isLiteral = node.type === "Literal";
+
+          let text: string;
+          if (isLiteral) {
+            // Remove string delimiters to avoid any potential issue with quote replacing.
+            text = node.raw.slice(1, node.raw.length - 1);
+          } else {
+            text = value;
+          }
+
+          let fixedText = text.replace(
             straightApostropheRegex,
             (_, a, b) => `${a}’${b}`
           );
-          const text =
-            node.type === "Literal"
-              ? `${node.raw.charAt(0)}${fixed}${node.raw.charAt(
-                  node.raw.length - 1
-                )}`
-              : fixed;
 
-          return fixer.replaceText(node, text);
+          if (isLiteral) {
+            // Add string delimiters back.
+            fixedText =
+              node.raw.charAt(0) +
+              fixedText +
+              node.raw.charAt(node.raw.length - 1);
+          }
+
+          return fixer.replaceText(node, fixedText);
         },
       });
     }
