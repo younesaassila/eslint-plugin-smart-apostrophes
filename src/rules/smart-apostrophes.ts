@@ -6,7 +6,7 @@ const rule: Rule.RuleModule = {
   meta: {
     type: "suggestion",
     docs: {
-      description: "Suggests the use of smart apostrophes over straight ones.",
+      description: "Prefer the use of smart apostrophes over straight ones.",
     },
     fixable: "code",
     schema: [],
