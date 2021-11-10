@@ -24,7 +24,7 @@ const rule: Rule.RuleModule = {
 
       context.report({
         node,
-        message: "Use smart apostrophe instead of straight apostrophe.",
+        message: "Prefer the use of a smart apostrophe (’).",
         fix(fixer) {
           const isLiteral = node.type === "Literal";
 
