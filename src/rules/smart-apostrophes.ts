@@ -31,7 +31,8 @@ const rule: Rule.RuleModule = {
 
           let text: string;
           if (isLiteral && "raw" in node) {
-            // Remove string delimiters to avoid any potential issues with replacing quotes.
+            // Remove string delimiters to avoid any potential issues with
+            // replacing delimiting quotes.
             text = node.raw.slice(1, node.raw.length - 1);
           } else {
             text = value;
@@ -49,7 +50,7 @@ const rule: Rule.RuleModule = {
               node.raw.charAt(node.raw.length - 1);
           } else if (isVLiteral) {
             // VLiteral nodes require the fixed text to have string delimiters
-            // even though their initial value don't have any.
+            // despite their initial value not having any.
             fixedText = `"${fixedText}"`;
           }
 
