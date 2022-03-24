@@ -1,5 +1,8 @@
 # eslint-plugin-smart-apostrophes
 
+| **Deprecated** | Please use [eslint-plugin-curly-quotes](https://github.com/younesaassila/eslint-plugin-curly-quotes) instead. |
+| -------------- | ------------------------------------------------------------------------------------------------------------- |
+
 Prefer the use of smart apostrophes over straight ones. Supports `.js`, `.ts` and `.vue` files.
 
 All contributions are welcome!
