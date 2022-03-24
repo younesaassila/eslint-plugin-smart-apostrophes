@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-smart-apostrophes",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Prefer the use of smart apostrophes over straight ones. Supports `.js`, `.ts` and `.vue` files.",
   "main": "./dist/index.js",
   "files": [
